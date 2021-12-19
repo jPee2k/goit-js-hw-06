@@ -25,7 +25,7 @@ const app = () => {
   const input = document.querySelector('#validation-input')
   input.addEventListener('blur', (evt) => {
     const maxLength = parseInt(evt.target.dataset.length, 10);
-    const { length } = evt.target.value;
+    const { length } = evt.target.value.trim();
     const state = getValidationState(length, maxLength);
     renderBorder(evt.target, state);
   });

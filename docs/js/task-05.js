@@ -5,7 +5,7 @@ const app = () => {
   };
 
   elements.input.addEventListener('input', (evt) => {
-    const { value } = evt.target;
+    const value = evt.target.value.trim();
     elements.output.textContent = value.length ? value : 'Anonymous';
   });
 };
